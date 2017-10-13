@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <a href="Exercise-1/Exercise 1/index.html" target="_blank"> Exercise-1 </a>
+    <a href="Exercise-2/Exercise 2/index.html" target="_blank"> Exercise-2 </a>
+    <a href="Exercise-3/Exercise 3/index.html" target="_blank"> Exercise-3 </a>
+    <a href="Exercise-4/Exercise 4/index.html" target="_blank"> Exercise-4 </a>
+  </header>
+  <div id="part1">
+    <fieldset>
+      <legend> Part 1 </legend>
+      <input type="text" name="input" v-on:input="changeTitle">
+      <input type="text" name="input" v-on:input="myWrite">
+      <p> {{ title }} <a v-bind:href="link" target="_blank"> Google</a> </p>
+      <h1 v-once>{{ sayHello() }}</h1>
+      <div v-html="finishedTitle">
+      </div>
+    </fieldset>
+    
+  </div>
+
+  <div id="part2">
+    <fieldset>
+      <legend> Part 2</legend>
+      <button v-on:click="increase(8%3, $event)"> Click me</button>
+      <p> {{counter}} </p>
+      <p v-on:mousemove="updateCoordinate"> Coordinates: {{x}} / {{y}} - <span v-on:mousemove.stop.prevent=""> DEAD SPOT</span> </p>
+      <input type="text" v-on:keyup.enter.space="alertMe">
+
+      <input type="text" v-model="sourceText">
+      <p> {{ sourceText }} </p>
+    </fieldset>
+  </div>
+
+  <div id="part3">
+    <fieldset>
+      <legend> Part 3</legend>
+      
+      <button v-on:click="counter++"> Increase </button>
+      <button v-on:click="counter--"> Decrease </button>
+      <button v-on:click="secondCounter++"> Increase Second </button>
+      <button v-on:click="secondCounter--"> Decrease Second </button>
+      <p> Counter : {{counter}} </p>
+      <p> Result: {{ result() }} -- {{ output }} </p>
+
+      <p> Second Counter : {{secondCounter}} </p>
+      <p> {{resul2t()}} </p>
+      <p> {{resul3t()}} </p>
+    </fieldset>
+  </div>
+
+  <div id="part4">
+    <fieldset>
+      <legend> Part 4</legend>
+      <section id="app">
+        <div class="demo" 
+        @click="attachRed = !attachRed" 
+        :class="divClasses"></div>
+        <div class="demo" :class="[color, divClasses]"></div>
+        <div class="demo" :class="[color, divClasses]"></div>
+        <div class="demo" :style="myStyle"></div>
+        <hr>
+        <input type="text" v-model="color">
+        <input type="text" v-model="width">
+      </section>
+    </fieldset>
+  </div>
+
+  <script type="text/javascript" src="bower_components/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

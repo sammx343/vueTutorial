@@ -1,0 +1,28 @@
+.demo{
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  display: inline-block;
+  margin: 10px;
+}
+
+.red{
+  background-color: #FF0000;
+}
+
+.green{
+  background-color: #00FF00;
+}
+
+.blue{
+  background-color: #0000FF;
+}
+
+header{
+  margin: 5px 10px;
+  padding: 20px;
+}
+
+header a{
+  margin: 0 10px;
+}
