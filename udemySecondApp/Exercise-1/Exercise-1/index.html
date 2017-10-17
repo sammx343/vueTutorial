@@ -1,0 +1,40 @@
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+
+<div id="exercise">
+  <!-- 1) Hook up the button to toggle the display of the two paragraphs. Use both v-if and v-show and inspect the elements to see the difference -->
+  <div>
+    <button @click="change()" >Toggle</button>
+    <div v-if="on">
+      <p>You either see me ...</p>
+      <p>...or me</p>
+    </div>
+    <div v-show="on">
+      <p>You either see me ...</p>
+      <p>...or me</p>
+    </div>
+  </div>
+  <!-- 2) Output an <ul> of array elements of your choice. Also print the index of each element. -->
+  <ul @click="add()">
+    <li v-for="stuff in thing"> {{stuff}} </li>
+  </ul>
+  <!-- 3) Print all key-value pairs of the following object: {title: 'Lord of the Rings', author: 'J.R.R. Tolkiens', books: '3'}. Also print the index of each item. -->
+  <ul>
+    <li v-for="(value, key, index) in object"> {{ value }} {{ key }} {{ index }}</li>
+  </ul>
+  <!-- 4) Print the following object (only the values) and also create a nested loop for the array: {name: 'TESTOBJECT', data: [1.67, 1.33, 0.98, 2.21]} (hint: use v-for and v-if to achieve this) -->
+  <ul>
+    <li v-for="(value, key) in testData">
+    <div v-if="key == 'data'">
+      {{ key }}
+      <ul >
+        <li v-for="val in value"> {{val}} </li>
+      </ul>
+    </div>
+    <div v-else>
+      {{ value }}
+    </div>
+    </li>
+  </ul>
+</div>
+
+<script src="app.js"> </script>

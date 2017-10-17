@@ -15,11 +15,15 @@
       <li v-for="(ingredient, index) in ingredients"> {{ingredient}} ({{ index }}) </li>
     </ul>
     <hr>
+      <button @click="ingredients.push('spices')"> Add Spices</button>
+    <hr>
     <ul>
       <li v-for="person in persons"> 
         <div v-for="(value, key, index) in person"> {{index}}   {{ key }} : {{value}} -  </div>
       </li>
     </ul>
+
+    <span v-for="n in 10"> {{n}}  </span>
   </div>
 
   <script type="text/javascript" src="../bower_components/vue/dist/vue.js"></script>
