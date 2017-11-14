@@ -45,11 +45,11 @@
               setTimeout(() =>{
                 setInterval(()=> {
                   currentColor == secondColor ? currentColor = mainColor : currentColor= secondColor;
-                if(binding.arg == 'background'){
-                  el.style.backgroundColor = currentColor;
-                }else{
-                  el.style.color = currentColor;
-                }
+                  if(binding.arg == 'background'){
+                    el.style.backgroundColor = currentColor;
+                  }else{
+                    el.style.color = currentColor;
+                  }
                 }, binding.value.delay);
               }, delay);
             }else{
